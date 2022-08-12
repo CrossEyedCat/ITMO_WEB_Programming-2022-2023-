@@ -1,10 +1,85 @@
+@font-face {
+    font-family: "DS_Pixel";
+    src: url("/resources/fonts/DS Pixel Cyr Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
 body{
+    padding: 0;
+    margin: 0;
     color: black;
     background: #ffffff;
 }
+header{
+    background-image: url("/resources/images/background_head.png");
+    height: 50px;
+}
+footer{
+    background-image: url("/resources/images/background_footer.png");
+    background-repeat: repeat-x;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 .foot_title{
-
+    font-family: "DS_Pixel", serif;
+    font-size: 20pt;
+    color: black;
+    mix-blend-mode: overlay;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
 }
 .head_title{
-
+    font-family: "DS_Pixel", serif;
+    position: absolute;
+    left: 10px;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 20pt;
+    color: black;
+    mix-blend-mode: overlay;
+}
+.target{
+    height:250px;
+    width:275px;
+}
+.menu{
+    font-family: "DS_Pixel", fantasy;
+    position: absolute;
+    left: 300px;
+    top: 50px;
+}
+.R{
+    position: relative;
+    left:110px;
+    top:-40px;
+    height: 17px;
+}
+.X{
+    position: relative;
+    left:110px;
+    top:-37px;
+    height: 10px;
+    width: 90px;
+}
+.Y{
+    position: relative;
+    left:110px;
+    top:-37px;
+    height: 10px;
+    width: 90px;
+}
+.R_text{
+    position: relative;
+    top:-20px;
+}
+.X_text{
+    position: relative;
+    top:-80px;
+}
+.Y_text{
+    position: relative;
+    top:-140px;
 }
