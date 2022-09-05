@@ -44,12 +44,14 @@ footer{
 .target{
     height:250px;
     width:275px;
+    position: relative;
+    left: 10px;
+    border: blueviolet 2px solid;
 }
 .menu{
     font-family: "DS_Pixel", fantasy;
-    position: absolute;
-    left: 300px;
-    top: 50px;
+    position: relative;
+    left:10px;
 }
 .R{
     position: relative;
