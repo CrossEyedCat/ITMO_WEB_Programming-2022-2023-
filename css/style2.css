@@ -1,0 +1,21 @@
+table {
+    width: 700px;
+    border: blueviolet 2px solid;
+    color: blue;
+    position:absolute;
+    left: 500px;
+    top: 50px;
+}
+td {
+    font-family: "DS_Pixel", serif;
+    padding: 3px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+.message_return{
+    font-family: "DS_Pixel", serif;
+    font-size: 15pt;
+    position: absolute;
+    left:300px;
+    width: 250px;
+}

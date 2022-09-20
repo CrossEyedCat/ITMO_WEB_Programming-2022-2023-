@@ -18,7 +18,7 @@ footer{
     background-image: url("/resources/images/background_footer.png");
     background-repeat: repeat-x;
     height: 50px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -35,13 +35,13 @@ footer{
     font-family: "DS_Pixel", serif;
     position: absolute;
     left: 10px;
-    padding-top: 5px;
+    padding-top: 0px;
     padding-left: 20px;
     font-size: 20pt;
     color: black;
     mix-blend-mode: overlay;
 }
-.target{
+img.target{
     height:250px;
     width:275px;
     position: relative;
@@ -50,8 +50,9 @@ footer{
 }
 .menu{
     font-family: "DS_Pixel", fantasy;
-    position: relative;
-    left:10px;
+    position: absolute;
+    left:300px;
+    top:25px;
 }
 .R{
     position: relative;
@@ -75,13 +76,23 @@ footer{
 }
 .R_text{
     position: relative;
-    top:-20px;
+    top:0px
 }
 .X_text{
     position: relative;
-    top:-80px;
+    top:-60px
 }
 .Y_text{
     position: relative;
-    top:-140px;
+    top:-100px
 }
+textarea{
+    position: relative;
+    top:-20px;
+}
+.button{
+    position: relative;
+    top:-115px;
+}
+
+
