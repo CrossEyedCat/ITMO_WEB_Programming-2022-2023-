@@ -3,7 +3,7 @@
 <head>
     <title>Лабораторная работа №1 //Зенкевич Артем</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
 </head>
 <body>
 <?php

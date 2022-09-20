@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab_1</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/st.scss">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <header>
@@ -25,7 +24,7 @@
             }
                     ?>
 <div class="middle">
-    <div class="target"><img class="target" src="/resources/images/target.png" alt="target"></div>
+    <div class="target"><img class="target" src="./resources/images/target.png" alt="target"></div>
     <div class="menu">
         <h2 class="center__text glitch is-glitching" data-text="Стрельбище">Стрельбище</h2>
         <h3>Настройка выстрела</h3>
@@ -54,7 +53,7 @@
     </div>
 </div>
 <?php
-			include 'script.php'; //определение попадания точки в область происходит здесь. ВАЖНО! в файле .html эта строка не будет работать
+			include './script.php'; //определение попадания точки в область происходит здесь. ВАЖНО! в файле .html эта строка не будет работать
 ?>
 <script>
     //здесь мы не даём пользователю ввести в поле для Y ввести не те данные
