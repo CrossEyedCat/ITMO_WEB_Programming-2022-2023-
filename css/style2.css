@@ -5,6 +5,10 @@ table {
     position:absolute;
     left: 500px;
     top: 50px;
+    max-height: 30%;
+}
+tr {
+    height: 50px;
 }
 td {
     font-family: "DS_Pixel", serif;

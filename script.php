@@ -39,11 +39,11 @@
             $halfR = $paramR / 2;
             $chetvert = 0;
             //узнаём четверть, в которой располагается точка
-            if ($coordX >= 0 && $coordY >= 0) $chetvert = 2;//правая верхняя
-            if ($coordX <= 0 && $coordY >= 0) $chetvert = 1;//левая верхняя
-            if ($coordX >= 0 && $coordY <= 0) $chetvert = 3;//правая нижняя
-            if ($coordX <= 0 && $coordY <= 0) $chetvert = 4;//левая нижняя
-            if ($chetvert == 1) {//в этой четверти совсем нет области, так что всё просто
+            if ($coordX <= 0 && $coordY >= 0) $chetvert = 2;
+            if ($coordX >= 0 && $coordY >= 0) $chetvert = 1;
+            if ($coordX <= 0 && $coordY <= 0) $chetvert = 3;
+            if ($coordX >= 0 && $coordY <= 0) $chetvert = 4;
+            if ($chetvert == 1) {
                 if ($coordX >= -$halfR && $coordY <= $paramR) {
                     $message = "Точка входит в область";
                 } else {
@@ -51,26 +51,25 @@
                 }
             }
 
-            if ($chetvert == 2) {//вспоминаем уравнение наклонной прямой y=kx+b, где b=-1, и если ниже, то входит, если выше, то нет
-                if (($coordX <= $halfR && $coordY == 0) || ($coordY <= $paramR && $coordX == 0)) {
+            if ($chetvert == 2) {
+                if ($coordX >= -$halfR && $coordY<=$paramR) {
                     $message = "Точка входит в область";
                 } else {
                     $message = "Точка не входит в область";
                 }
             }
 
-            if ($chetvert == 3) {//поскольку прямоугольник, то X<=R и Y<=R/2. Если да, то в области. нет - нет
-                if ($coordX + $coordY >= -$paramR) {
+            if ($chetvert == 3) {
+                if ($coordX + $coordY >= -$halfR) {
                     $message = "Точка входит в область";
                 } else {
                     $message = "Точка не входит в область";
                 }
             }
 
-            if ($chetvert == 4) {//окружность с центром в точке (0;0). Находим расстояние от нашей точки до центра окружности, и если оно больше R/2, то точка не в области.
+            if ($chetvert == 4) {
                 $distance = $coordX * $coordX + $coordY * $coordY;
-                $distance = sqrt($distance);
-                if ($distance > $halfR) {
+                if ($distance > $halfR*$halfR) {
                     $message = "Точка не входит в область";
                 } else {
                     $message = "Точка входит в область";
@@ -108,12 +107,19 @@
         <td>Результат</td>
     </tr>
     <?php
-	//таблица истории введённых значений. Работает на костылях и некрасиво, но работает
-    for($m=1;$m<=$ses;$m++){
+    if($ses>5){
+        $m = $ses-5;
+    }
+    else{
+        $m = 1;
+    }
+    for(;$m<=$ses;$m++){
         echo $_SESSION['str_'.$m];
     }
-
     ?>
+    <script>
+
+    </script>
 </table>
 </body>
 </html>
